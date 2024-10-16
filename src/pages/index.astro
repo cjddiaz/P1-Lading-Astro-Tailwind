@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Landing Page">
+	<main class="h-screen bg-custom-bg flex items-center justify-center relative overflow-hidden">
+		<div class="absolute inset-0 bg-[url('https://i.ibb.co/3zY1cpW/Proyecto-nuevo-1.jpg')] bg-cover bg-center opacity-5"></div>
+		<div class="container mx-auto px-4 relative z-10 flex items-center justify-center">
+			<div class="h-full"> <!-- Limita el ancho de la imagen -->
+				<img src="https://i.ibb.co/7CdmYZN/pistadisen-o.png" alt="Main content" class="w-[700px] h-auto object-contain" />
+			</div>
+		</div>
+		<div class="fixed top-8 left-8 pl-28 z-20">
+			<p class="text-white font-bold text-4xl">SAN JOSÉ, COSTA RICA</p>
+		</div>
+		<div class="fixed bottom-8 right-8 flex flex-col items-center pr-28 z-20">
+			<img src="https://i.ibb.co/pjpxhxt/p1logo.png" alt="Logo" class="w-64 h-auto mb-4" />
+			<a href="/home" class="bg-red-600 text-center text-white font-bold mb-10 py-2 px-20 rounded hover:bg-red-700 transition duration-300 mr-10">
+				INICIO
+			</a>
+		</div>
+	</main>
+</Layout>
