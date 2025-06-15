@@ -1,23 +1,152 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Ruler, Layout as LayoutIcon, UserCheck } from 'lucide-react';
+import CalendarCarousel from '../components/CalendarCarousel.jsx';
 ---
 
-<Layout title="Landing Page">
-	<main class="h-screen bg-custom-bg flex items-center justify-center relative overflow-hidden">
-		<div class="absolute inset-0 bg-[url('https://i.ibb.co/3zY1cpW/Proyecto-nuevo-1.jpg')] bg-cover bg-center opacity-5"></div>
-		<div class="container mx-auto px-4 relative z-10 flex items-center justify-center">
-			<div class="h-full"> <!-- Limita el ancho de la imagen -->
-				<img src="https://i.ibb.co/7CdmYZN/pistadisen-o.png" alt="Main content" class="w-[700px] h-auto object-contain" />
-			</div>
-		</div>
-		<div class="fixed top-8 left-8 pl-28 z-20">
-			<p class="text-white font-bold text-4xl">SAN JOSÉ, COSTA RICA</p>
-		</div>
-		<div class="fixed bottom-8 right-8 flex flex-col items-center pr-28 z-20">
-			<img src="https://i.ibb.co/pjpxhxt/p1logo.png" alt="Logo" class="w-64 h-auto mb-4" />
-			<a href="/home" class="bg-red-600 text-center text-white font-bold mb-10 py-2 px-20 rounded hover:bg-red-700 transition duration-300 mr-10">
-				INICIO
-			</a>
-		</div>
-	</main>
+<Layout title="P1 Speedway - Viviendo la Velocidad Al Límite">
+  <!-- Hero Section -->
+  <section id="Home" class="relative h-screen">
+    <!-- Imagen de fondo -->
+    <img src="https://p1speedway.com/images/background1.png" alt="Background Hero" class="absolute inset-0 w-full h-full object-cover opacity-70">
+  
+    <!-- Capa de color degradado -->
+    <div class="absolute inset-0 w-full h-full" style="background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(255, 0, 0, 0.3) 80%);"></div>
+  
+    <!-- Contenido -->
+    <div class="relative z-10 flex flex-col items-center justify-center md:flex-row md:justify-between h-full px-4 md:px-8 space-y-4 md:space-y-0">
+      <img src="https://p1speedway.com/images/P1logo.webp" alt="P1 Logo" class="w-48 md:w-96 lg:w-[50rem]">
+  
+      <h1 class="text-3xl max-w-xl text-center md:text-left md:text-4xl lg:text-6xl font-serif text-white pt-24 md:pt-0">
+        Viviendo La Velocidad Al Límite
+      </h1>
+    </div>
+  </section>
+
+  <!-- Competencias, Alquiler de Karts, Empresariales -->
+  <section class="py-8 md:py-16 px-4 md:px-8 bg-black">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+      <div class="flex items-center border-r-0 md:border-r-2 border-red-600 pr-0 md:pr-4">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mr-4 border-r-2 md:border-r-0 border-red-600 pr-4 md:pr-0">01</h2>
+        <div>
+          <p class="text-lg md:text-xl">Competencias</p>
+          <p>Eventos de pista abiertos para disfrute de todos.</p>
+        </div>
+      </div>
+      <div class="flex items-center border-r-0 md:border-r-2 border-red-600 pr-0 md:pr-4">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mr-4 border-r-2 md:border-r-0 border-red-600 pr-4 md:pr-0">02</h2>
+        <div>
+          <p class="text-lg md:text-xl">Alquiler de Karts</p>
+          <p>Disfruta de nuestros karts rentados para una experiencia inolvidable.</p>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mr-4 border-r-2 md:border-r-0 border-red-600 pr-4 md:pr-0">03</h2>
+        <div>
+          <p class="text-lg md:text-xl">Empresariales</p>
+          <p>Organiza eventos únicos en nuestra pista profesional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- P1 Speedway Section -->
+  <section id="aboutus" class="py-8 md:py-16 bg-black text-center">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start text-left">
+      <!-- Contenedor de las imágenes -->
+      <div class="flex flex-row justify-center md:justify-start gap-4 md:gap-8 mt-4 md:mt-0 md:w-1/2">
+        <div class="w-32 h-48 md:w-48 md:h-64 relative transform skew-x-[-20deg] overflow-hidden">
+          <img src="https://p1speedway.com/images/kart1.png" alt="Kart 1" class="w-full h-full object-cover">
+        </div>
+        <div class="w-32 h-48 md:w-48 md:h-64 relative transform skew-x-[-20deg] overflow-hidden mt-4 md:mt-6">
+          <img src="https://p1speedway.com/images/kart2.png" alt="Kart 2" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- Contenedor del texto -->
+      <div class="md:w-1/2 md:pl-8 text-center md:text-left mt-6">
+        <h2 class="text-3xl md:text-5xl font-bold text-white">P1 Speedway</h2>
+        <p class="mt-4 text-white px-10 md:px-0">
+          P1 Speedway es un proyecto privado dedicado a ofrecer un espacio para la práctica de deportes de motor en Costa Rica. La pista fue diseñada para competencias de kartismo, motovelocidad, minibikes y más, con instalaciones aptas para eventos recreativos y corporativos. Está construida bajo estándares internacionales, avalados por la Federación Internacional de Automovilismo (FIA).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Características de la Pista -->
+  <section class="py-8 md:py-16 bg-black">
+    <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-10 text-center text-white">Características de la pista</h2>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div>
+        <Ruler className="w-12 h-12 text-red-600 mx-auto" />
+        <h3 class="text-xl font-bold mt-4">Dimensiones Totales</h3>
+        <p>1,000 metros de pista profesional.</p>
+      </div>
+      <div>
+        <LayoutIcon className="w-12 h-12 text-red-600 mx-auto" />
+        <h3 class="text-xl font-bold mt-4">Diseño Flexible</h3>
+        <p>Diseñado con múltiples configuraciones posibles.</p>
+      </div>
+      <div>
+        <UserCheck className="w-12 h-12 text-red-600 mx-auto" />
+        <h3 class="text-xl font-bold mt-4">Creadores Expertos</h3>
+        <p>Creado por profesionales con experiencia.</p>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <a href="/detalles-tecnicos" class="inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+        Ver detalles técnicos
+      </a>
+    </div>
+  </section>
+
+  <!-- Calendar Section -->
+  <section class="py-8 md:py-16 bg-black">
+    <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-10 text-center text-white">Calendario de actividades</h2>
+    <CalendarCarousel
+      client:load
+      calendarItems={[
+        {
+          id: 1,
+          image: "https://p1speedway.com/images/calendarioS.jpg",
+          title: "Calendario Semanal"
+        },
+        {
+          id: 2,
+          image: "https://p1speedway.com/images/calendario1S.jpg",
+          title: "Calendario Primer Semestre"
+        },
+        {
+          id: 3,
+          image: "https://p1speedway.com/images/calendario2S.jpg",
+          title: "Calendario Segundo Semestre"
+        },
+      ]}
+    />
+  </section>
+
+  <!-- Compromiso Ecológico -->
+  <section class="relative py-16">
+    <!-- Imagen de fondo -->
+    <img src="https://p1speedway.com/images/background2.png" alt="Compromiso Ecológico" class="absolute inset-0 w-full h-full object-cover opacity-70">
+
+    <!-- Capa de color degradado -->
+    <div class="absolute inset-0 w-full h-full" style="background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(255, 0, 0, 0.3) 80%);"></div>
+
+    <!-- Contenido -->
+    <div class="relative z-10 max-w-5xl mx-auto text-white flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0">
+      <div class="md:w-2/5 lg:w-1/3">
+        <h2 class="text-4xl lg:text-5xl font-bold">Compromiso Ecológico</h2>
+      </div>
+      <div class="md:w-1/2 space-y-2">
+        <p class="max-w-md px-10 md:px-0">En P1 Speedway somos conscientes con la ecología y el reciclaje por eso en la construcción de la 
+          pista por parte de la empresa Pavicen se colocaron <strong>1.551 toneladas de mezcla asfáltica</strong> en la pista 
+          y Pits y se agregaron un <strong>0.5% de ese peso (7.755 kilos) de plásticos molidos tipos 1, 2, 5, 6 y 
+          algunos de tipo 7</strong>, tales como botellas de refrescos, platos desechables, empaques de 
+          comidas bolsas, etc.</p>
+        <p class="max-w-md px-10 md:px-0"><strong>Esto equivale a un total de 310.200 botellas de 600 ml, evitando así que estos desechos estén 
+          en nuestros vertederos, ríos o mares.</strong></p>
+      </div>
+    </div>
+  </section>
 </Layout>

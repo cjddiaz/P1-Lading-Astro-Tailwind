@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ImageGallery from '../components/ImageGallery.astro';
+
+const eventImages = [
+  { id: 1, url: 'https://p1speedway.com/images/eventos/event1.png', caption: 'TrackDay' },
+  { id: 2, url: 'https://p1speedway.com/images/eventos/event2.jpg', caption: 'OpenTrack' },
+  // Agrega más imágenes según sea necesario
+];
+---
+
+<Layout title="Últimos Eventos - P1 Speedway">
+  <ImageGallery
+    title="Galería de Últimos Eventos"
+    photographer="cjddiaz"
+    images={eventImages}
+  />
+</Layout>

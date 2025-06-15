@@ -1,0 +1,127 @@
+---
+import { useState } from 'react';
+
+interface Props {
+  title: string;
+  photographer: string;
+  images: {
+    id: number;
+    url: string;
+    caption?: string;
+  }[];
+}
+
+const { title, photographer, images } = Astro.props;
+---
+
+<div class="min-h-screen bg-black py-16 px-4">
+  <div class="max-w-7xl mx-auto">
+    <!-- Encabezado -->
+    <div class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{title}</h1>
+      <p class="text-gray-400">Fotos cortesía de {photographer}</p>
+    </div>
+
+    <!-- Galería -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {images.map((image) => (
+        <div class="group relative overflow-hidden rounded-lg aspect-square">
+          <img
+            src={image.url}
+            alt={image.caption || title}
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 cursor-pointer"
+            data-fullscreen="true"
+            data-image-id={image.id}
+          />
+          {image.caption && (
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+              <p>{image.caption}</p>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<!-- Modal de pantalla completa -->
+<div id="fullscreenModal" class="fixed inset-0 z-50 bg-black bg-opacity-90 hidden">
+  <div class="absolute inset-0 flex items-center justify-center">
+    <button
+      id="closeFullscreen"
+      class="absolute top-4 right-4 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition-all z-10"
+      aria-label="Cerrar"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <img
+      id="fullscreenImage"
+      src=""
+      alt=""
+      class="max-h-screen max-w-full object-contain"
+    />
+    <p id="fullscreenCaption" class="absolute bottom-4 left-0 right-0 text-center text-white bg-black bg-opacity-50 py-2 px-4"></p>
+  </div>
+</div>
+
+<script>
+  // Función para abrir la imagen en pantalla completa
+  function openFullscreen(imageUrl, caption) {
+    const modal = document.getElementById('fullscreenModal');
+    const image = document.getElementById('fullscreenImage');
+    const captionElement = document.getElementById('fullscreenCaption');
+    
+    if (modal && image && captionElement) {
+      modal.classList.remove('hidden');
+      image.src = imageUrl;
+      image.alt = caption || '';
+      captionElement.textContent = caption || '';
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  // Función para cerrar la pantalla completa
+  function closeFullscreen() {
+    const modal = document.getElementById('fullscreenModal');
+    if (modal) {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Agregar event listeners
+  document.addEventListener('DOMContentLoaded', () => {
+    // Event listener para las imágenes
+    document.querySelectorAll('img[data-fullscreen="true"]').forEach(img => {
+      img.addEventListener('click', () => {
+        const caption = img.closest('.group').querySelector('p')?.textContent;
+        openFullscreen(img.src, caption);
+      });
+    });
+
+    // Event listener para cerrar el modal
+    const closeButton = document.getElementById('closeFullscreen');
+    if (closeButton) {
+      closeButton.addEventListener('click', closeFullscreen);
+    }
+
+    // Event listener para cerrar con la tecla Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeFullscreen();
+      }
+    });
+
+    // Event listener para cerrar haciendo clic fuera de la imagen
+    const modal = document.getElementById('fullscreenModal');
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeFullscreen();
+        }
+      });
+    }
+  });
+</script>

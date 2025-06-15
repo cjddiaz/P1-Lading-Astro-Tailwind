@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ImageGallery from '../components/ImageGallery.astro';
+
+const motoImages = [
+  { id: 1, url: 'https://p1speedway.com/images/moto/moto1.jpg', caption: 'P1 - AMA' },
+  { id: 2, url: 'https://p1speedway.com/images/moto/moto2.jpg', caption: 'P1 - AMA' },
+  { id: 3, url: 'https://p1speedway.com/images/moto/moto3.jpg', caption: 'P1 - AMA' },
+  { id: 4, url: 'https://p1speedway.com/images/moto/moto4.jpg', caption: 'P1 - AMA' },
+  { id: 5, url: 'https://p1speedway.com/images/moto/moto5.jpg', caption: 'P1 - AMA' },
+  { id: 6, url: 'https://p1speedway.com/images/moto/moto6.jpg', caption: 'P1 - AMA' },
+  { id: 7, url: 'https://p1speedway.com/images/moto/moto7.jpg', caption: 'P1 - AMA' },
+  { id: 8, url: 'https://p1speedway.com/images/moto/moto8.jpg', caption: 'P1 - AMA' },
+];
+---
+
+<Layout title="Galería de Motociclismo - P1 Speedway">
+  <ImageGallery
+    title="Galería de Motociclismo"
+    photographer="AMA Super Bikes Costa Rica"
+    images={motoImages}
+  />
+</Layout>

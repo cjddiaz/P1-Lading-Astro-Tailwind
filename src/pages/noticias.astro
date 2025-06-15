@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NewsCarousel from '../components/NewsCarousel.jsx';
+import GallerySection from '../components/GallerySection.astro';
+
+const newsItems = [
+  { id: 1, title: 'P1 Speedway abre sus puertas', image: 'https://p1speedway.com/images/news1.png' },
+  { id: 2, title: 'Únete con nosotros al Track Day', image: 'https://p1speedway.com/images/news2.png' },
+  { id: 3, title: 'Gran evento de inauguración en P1 Speedway', image: 'https://p1speedway.com/images/news3.png' },
+];
+
+const galleries = [
+  { title: 'Galería de Kartismo', image: 'https://p1speedway.com/images/kart-gallery.png', link: '/galeria-kartismo' },
+  { title: 'Galería de Motociclismo', image: 'https://p1speedway.com/images/moto-gallery.jpg', link: '/galeria-motociclismo' },
+  { title: 'Últimos Eventos', image: 'https://p1speedway.com/images/events-gallery.png', link: '/ultimos-eventos' },
+];
+---
+
+<Layout title="Noticias - P1 Speedway">
+  <main class="pt-24 bg-black text-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+      
+      <section class="max-w-6xl mx-auto mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Últimas Noticias</h2>
+        <NewsCarousel client:load newsItems={newsItems} />
+      </section>
+
+      <section class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        {galleries.map((gallery) => (
+          <GallerySection
+            title={gallery.title}
+            image={gallery.image}
+            link={gallery.link}
+          />
+        ))}
+      </section>
+    </div>
+  </main>
+</Layout>
