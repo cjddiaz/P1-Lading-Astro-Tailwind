@@ -1,23 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ImageGallery from '../components/ImageGallery.astro';
+import ImageGallery from '../components/ImageGallery';
+import moto1 from '../assets/images/moto/moto1.jpg';
+import moto2 from '../assets/images/moto/moto2.jpg';
+import moto3 from '../assets/images/moto/moto3.jpg';
+import moto4 from '../assets/images/moto/moto4.jpg';
 
+// Data based on the old galeria-motociclismo.astro
 const motoImages = [
-  { id: 1, url: 'https://p1speedway.com/images/moto/moto1.jpg', caption: 'P1 - AMA' },
-  { id: 2, url: 'https://p1speedway.com/images/moto/moto2.jpg', caption: 'P1 - AMA' },
-  { id: 3, url: 'https://p1speedway.com/images/moto/moto3.jpg', caption: 'P1 - AMA' },
-  { id: 4, url: 'https://p1speedway.com/images/moto/moto4.jpg', caption: 'P1 - AMA' },
-  { id: 5, url: 'https://p1speedway.com/images/moto/moto5.jpg', caption: 'P1 - AMA' },
-  { id: 6, url: 'https://p1speedway.com/images/moto/moto6.jpg', caption: 'P1 - AMA' },
-  { id: 7, url: 'https://p1speedway.com/images/moto/moto7.jpg', caption: 'P1 - AMA' },
-  { id: 8, url: 'https://p1speedway.com/images/moto/moto8.jpg', caption: 'P1 - AMA' },
+  { id: 1, url: moto1, caption: 'Categoría Minibikes' },
+  { id: 2, url: moto2, caption: 'Circuito Motovelocidad' },
+  { id: 3, url: moto3, caption: 'P1 - Motociclismo' },
+  { id: 4, url: moto4, caption: 'P1 - Motociclismo' },
 ];
 ---
 
 <Layout title="Galería de Motociclismo - P1 Speedway">
-  <ImageGallery
-    title="Galería de Motociclismo"
-    photographer="AMA Super Bikes Costa Rica"
-    images={motoImages}
-  />
+  <main class="pt-32 pb-16 bg-black min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ImageGallery
+        client:load
+        title="Galería de Motociclismo"
+        photographer="Puro Motor"
+        images={motoImages}
+      />
+    </div>
+  </main>
 </Layout>

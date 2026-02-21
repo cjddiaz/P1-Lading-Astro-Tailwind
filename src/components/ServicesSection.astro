@@ -1,0 +1,52 @@
+---
+// ServicesSection.astro
+const services = [
+  {
+    number: "01",
+    title: "Competencias",
+    description: "Eventos de pista abiertos para el disfrute de todos los niveles, desde aficionados hasta profesionales.",
+  },
+  {
+    number: "02",
+    title: "Alquiler de Karts",
+    description: "Disfruta de nuestros karts rentados de última generación para una experiencia llena de adrenalina y velocidad.",
+  },
+  {
+    number: "03",
+    title: "Empresariales",
+    description: "Organiza eventos únicos, carreras corporativas y actividades de team building en nuestra pista profesional.",
+  }
+];
+---
+
+<section id="services" class="py-20 md:py-32 bg-neutral-950 relative overflow-hidden">
+  <!-- Subtle grid pattern overlay -->
+  <div class="absolute inset-0 opacity-[0.03] select-none pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-12">
+      {services.map((service, index) => (
+        <div class="group relative flex flex-col p-8 md:p-10 bg-black border border-neutral-900 rounded-2xl hover:border-red-600/50 hover:bg-neutral-900/50 transition-all duration-500 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-900/20">
+          <!-- Animated gradient accent on hover -->
+          <div class="absolute inset-0 bg-gradient-to-br from-red-600/0 to-red-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+          
+          <div class="flex items-start md:items-center lg:items-start xl:items-center gap-6 mb-6">
+            <span class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-red-500 to-red-800 drop-shadow-sm font-sans tracking-tighter">
+              {service.number}
+            </span>
+            <div class="h-12 w-px bg-neutral-800 hidden md:block lg:hidden xl:block"></div>
+            <h3 class="text-2xl font-bold text-white tracking-wide">{service.title}</h3>
+          </div>
+          
+          <p class="text-neutral-400 leading-relaxed group-hover:text-neutral-300 transition-colors">
+            {service.description}
+          </p>
+          
+          <!-- Decorative corner element -->
+          <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-red-600/20 to-transparent -mr-8 -mt-8 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-600/0 via-red-600/0 to-red-600/0 group-hover:from-red-600/80 group-hover:via-red-500 group-hover:to-red-600/80 transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

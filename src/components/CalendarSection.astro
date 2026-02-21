@@ -1,0 +1,33 @@
+---
+import CalendarCarousel from './CalendarCarousel';
+import calendario2026 from '../assets/images/calendario2026.webp';
+---
+
+<section class="py-20 md:py-32 bg-black border-t border-neutral-900 overflow-hidden relative">
+  <!-- Decorative glowing backdrop -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-900/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center md:mb-16 mb-10">
+      <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-wider font-sans mb-4">
+        Calendario de <span class="text-red-600">Actividades</span>
+      </h2>
+      <p class="text-neutral-400 text-lg max-w-2xl mx-auto">
+        Mantente al día con todos los track days, competencias oficiales y eventos especiales de la temporada.
+      </p>
+    </div>
+
+    <div class="max-w-xl mx-auto md:max-w-3xl lg:max-w-4xl">
+      <CalendarCarousel
+        client:load
+        calendarItems={[
+          {
+            id: 1,
+            image: calendario2026,
+            title: "Calendario 2026"
+          }
+        ]}
+      />
+    </div>
+  </div>
+</section>

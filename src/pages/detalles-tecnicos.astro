@@ -1,51 +1,104 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import background1 from '../assets/images/background1.webp';
+import trackMap from '../assets/images/detalle.webp';
 ---
 
 <Layout title="Detalles Técnicos - P1 Speedway">
-    <section class="relative w-full min-h-screen bg-black overflow-hidden flex flex-col items-center justify-center py-8">
-        <!-- Título Diseño de la pista -->
-        <h1 class="text-white text-2xl md:text-3xl font-bold mb-4 text-center px-4">
-            Diseño de la pista
-        </h1>
-        
-        <!-- Imagen detalles.png con tamaño limitado -->
-        <img src="https://p1speedway.com/detalle.png" alt="Detalles de la pista" class="mb-4 max-w-full max-h-96 md:max-w-lg" />
-        
-        <!-- Título Especificaciones técnicas -->
-        <h2 class="text-white text-xl md:text-2xl font-semibold mb-2 text-center px-4">
-            Especificaciones técnicas
-        </h2>
-        
-        <!-- Párrafo 1 -->
-        <p class="text-white text-center px-4 md:px-8">
-            P1 Speedway es un proyecto privado que viene a solventar la falta de espacios para 
-            practicar deportes de motor en Costa Rica, es la primera pista diseñada y construida 
-            para albergar la práctica y competencias de kartismo, motovelocidad, minibikes, 
-            patinaje, etc. Así como brindar el servicio de alquiler de karts con fines recreativos 
-            y la utilización de la pista para eventos empresariales.
-        </p>
+  <!-- Hero Section for the page -->
+  <section class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-black flex items-center justify-center">
+    <!-- Background Effect -->
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity" style={`background-image: url('${background1}')`}></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+    </div>
+    
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-4 justify-center mb-6">
+        <div class="h-0.5 w-8 md:w-12 bg-red-600"></div>
+        <span class="text-red-500 font-bold uppercase tracking-widest text-sm">Circuito P1</span>
+        <div class="h-0.5 w-8 md:w-12 bg-red-600"></div>
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-7xl font-black text-white mb-6 tracking-tight">
+        Detalles <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">Técnicos</span>
+      </h1>
+      <p class="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+        Conoce a fondo las especificaciones y características que hacen de nuestra pista un referente internacional.
+      </p>
+    </div>
+  </section>
 
-        <!-- Párrafo 2 -->
-        <p class="text-white text-center px-4 md:px-8 mt-4">
-            La pista tiene una longitud de 1.100 mts y 9 mts de ancho.
-        </p>
+  <!-- Technical Details Content -->
+  <section class="py-16 md:py-24 bg-black relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <!-- Content Side -->
+        <div class="space-y-10 order-2 lg:order-1">
+          <div>
+            <h2 class="text-3xl font-bold text-white mb-6">Especificaciones de Clase Mundial</h2>
+            <div class="prose prose-invert prose-lg text-neutral-400">
+              <p>
+                P1 Speedway es un proyecto privado que viene a solventar la falta de espacios para practicar deportes de motor en Costa Rica. Somos la primera pista diseñada y construida específicamente para albergar la práctica y competencias de kartismo, motovelocidad, minibikes y patinaje.
+              </p>
+              <p>
+                Además, brindamos el servicio de alquiler de karts con fines recreativos y ofrecemos la utilización de nuestras instalaciones prime para eventos empresariales y corporativos.
+              </p>
+            </div>
+          </div>
 
-        <!-- Párrafo 3 -->
-        <p class="text-white text-center px-4 md:px-8 mt-4">
-            El circuito fue diseñado para utilizarse en varias configuraciones para que se ajuste a 
-            la actividad que se requiera. Presenta curvas de gran exigencia técnica y rectas para 
-            desarrollar velocidad. EL diseño de la pista fue elaborado por el experimentado piloto 
-            Andrés Fonseca y el arquitecto Gustavo Hernández Raventós durante el proceso de diseño y 
-            construcción tuvieron el acompañamiento del Automóvil Club de Costa Rica.
-        </p>
+          <!-- Highlight Stats -->
+          <div class="grid grid-cols-2 gap-6 p-6 md:p-8 bg-neutral-900/50 border border-neutral-800 rounded-2xl">
+            <div>
+              <div class="text-4xl md:text-5xl font-black text-white mb-2">1,100<span class="text-red-500 text-2xl">m</span></div>
+              <div class="text-sm font-semibold text-neutral-500 uppercase tracking-wider">Longitud Total</div>
+            </div>
+            <div>
+              <div class="text-4xl md:text-5xl font-black text-white mb-2">9<span class="text-red-500 text-2xl">m</span></div>
+              <div class="text-sm font-semibold text-neutral-500 uppercase tracking-wider">Ancho de Pista</div>
+            </div>
+          </div>
 
-        <!-- Párrafo 4 -->
-        <p class="text-white text-center px-4 md:px-8 mt-4">
-            Las instalaciones de P1 Speedway cuentan con todos los permisos de funcionamiento por 
-            parte de la entidades gubernamentales. Además cumple con la reglamentación estipulada 
-            por la Federación Internacional de Automovilismo, FIA, ente internacional dedicado a 
-            avalar y fiscalizar las competencias de motores alrededor del mundo.
-        </p>
-    </section>
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-4">Diseño Multifuncional</h3>
+            <p class="text-neutral-400 text-lg leading-relaxed mb-4">
+              El circuito fue diseñado de forma modular para utilizarse en varias configuraciones, ajustándose de manera óptima a la actividad requerida. Presenta curvas de gran exigencia técnica combinadas con rectas diseñadas para desarrollar máxima velocidad.
+            </p>
+            <p class="text-neutral-400 text-lg leading-relaxed">
+              El diseño de la pista fue elaborado por el experimentado piloto Andrés Fonseca y el arquitecto Gustavo Hernández Raventós. Durante el riguroso proceso de diseño y construcción, contamos con el valioso acompañamiento del Automóvil Club de Costa Rica.
+            </p>
+          </div>
+          
+          <div class="bg-red-900/10 border-l-4 border-red-600 p-6 rounded-r-xl">
+            <h4 class="text-white font-bold text-lg mb-2 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check text-red-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+              Certificación Internacional
+            </h4>
+            <p class="text-neutral-300">
+              Nuestras instalaciones cuentan con todos los permisos gubernamentales de funcionamiento y cumplen a cabalidad con la estricta reglamentación estipulada por la Federación Internacional de Automovilismo (FIA), ente mundial dedicado a avalar y fiscalizar las competencias de motores.
+            </p>
+          </div>
+        </div>
+
+        <!-- Track Map Side -->
+        <div class="order-1 lg:order-2 flex flex-col items-center">
+          <div class="relative w-full aspect-square md:aspect-[4/3] lg:aspect-auto lg:h-[800px] flex items-center justify-center bg-neutral-900/30 rounded-3xl border border-neutral-800/50 p-8 shadow-2xl group overflow-hidden">
+            <!-- Glow background -->
+            <div class="absolute inset-0 bg-red-600/10 blur-[120px] rounded-full scale-50 group-hover:scale-75 transition-transform duration-700"></div>
+            
+            <img 
+              src={trackMap} 
+              alt="Plano detallado del circuito P1 Speedway" 
+              class="relative z-10 w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+          <div class="mt-6 flex items-center gap-2 text-neutral-500 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></svg>
+            Plano oficial del circuito P1
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
 </Layout>

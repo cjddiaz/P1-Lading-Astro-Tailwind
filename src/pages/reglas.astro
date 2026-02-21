@@ -2,83 +2,90 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Reglas de pista - P1 Speedway">
-  <main class="pt-24 pb-12 text-white">
-    <div class="container mx-auto px-4 max-w-4xl">
-      <header class="border-b border-red-700 pb-6 mb-8">
-        <h1 class="text-3xl md:text-4xl font-bold text-white">NORMAS PARA LA UTILIZACIÓN DE LA PISTA</h1>
-      </header>
+<Layout title="Reglas de Pista - P1 Speedway">
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-black flex items-center justify-center border-b border-neutral-900 border-dashed">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-red-900/10 to-black"></div>
+    </div>
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-4 justify-center mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alert-triangle text-red-500"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        <span class="text-red-500 font-bold uppercase tracking-widest text-sm">Normativa Oficial</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-7xl font-black text-white mb-6 tracking-tight">
+        Reglas de la <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">Pista</span>
+      </h1>
+      <p class="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+        Normas de obligatorio cumplimiento para garantizar la seguridad, el orden y el disfrute máximo de todos en P1 Speedway.
+      </p>
+    </div>
+  </section>
 
-      <div class="prose prose-invert max-w-none">
-        <p class="mb-6 text-lg">Para garantizar la seguridad y el disfrute de todos, P1 Speedway establece las siguientes normas de obligatorio cumplimiento:</p>
+  <main class="bg-black py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Rules List -->
+      <div class="bg-neutral-900/40 border border-neutral-800 rounded-2xl p-6 md:p-12 mb-12 shadow-2xl">
+        <ol class="space-y-6 list-decimal list-outside ml-6 text-neutral-300 text-lg marker:text-red-500 marker:font-bold">
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">Está prohibido el ingreso de mascotas, armas y sustancias psicoactivas en la pista y alrededores.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">P1 Speedway es un lugar libre de humo, de acuerdo con la Ley 9028, por lo tanto está prohibido fumar cigarrillos de cualquier tipo y el uso de vapeadores.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">Los menores de edad deben de estar acompañados por su padre, madre o apoderado legal en las áreas autorizadas.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">No se permite el ingreso de vehículos particulares en zona de pits, deben de permanecer en el parqueo o zonas permitidas bajo la responsabilidad del conductor.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50 text-neutral-200 font-medium">En las zonas de parqueos, calles de acceso etc., los vehículos automotores solo deben ser utilizados por personas que tengan la licencia correspondiente que los faculte para hacerlo, siguiendo todas las regulaciones que exige la ley de tránsito costarricense. Se deben respetar todas las señales de tránsito y velocidades establecidas.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">Es obligatorio en todos los pits contar con extintores de Clase A (madera, cartón, papel, tela) Clase B (pintura, gasolina, petróleo) y Clase C (equipo o instalaciones eléctricas), con su certificación de uso vigente.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50 text-neutral-200">Todo usuario de la pista debe haber cancelado y firmado el documento de exoneración de responsabilidades. El uso de elementos de protección es <strong>obligatorio</strong>:
+            <ul class="list-disc ml-6 mt-4 space-y-2 text-neutral-400 marker:text-neutral-600 font-normal">
+              <li><strong>Para karts:</strong> Casco cerrado, uniforme, neck protection, guantes, zapatos altos o botines que cubran los tobillos.</li>
+              <li><strong>Para motocicletas:</strong> Casco cerrado o que cubra toda la cabeza con googles, uniforme de protección, guantes, rodilleras, botas altas.</li>
+            </ul>
+          </li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">Por razones de seguridad NO se permite el uso de la pista a personas con falda o pantalonetas. El cabello largo se debe llevar recogido (cola o balaclava) dentro del uniforme. Igualmente prohibido para: mujeres embarazadas, infantes menores a 5 años o personas con condiciones físicas que impidan la conducción segura.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50 font-bold text-red-100">No está permitido el uso de la pista a ninguna persona bajo los efectos del alcohol o cualquier tipo de droga.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">Antes de utilizar la pista, verificar el sentido de giro autorizado, confirmar siempre con los oficiales de pista.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">Solo se permite hacer mecánica en la zona específica de pits, no es permitido en ninguna otra parte de la pista.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">No está permitido lavar karts, motos, o cualquier otro tipo de vehículo en la zona de pits. Se habilitará un área específica e impone uso único de desengrasante. (Prohibido uso de gasolina o diésel como disolvente).</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">Respetar y no obstaculizar las zonas de evacuación, atención médica y puntos de encuentro de emergencias.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">El consumo de alimentos o bebidas es estrictamente limitado a las zonas sociales autorizadas.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50 text-neutral-200">El piloto practicante y sus acompañantes son responsables al 100% por daños materiales y personales causados a terceros o a las instalaciones de P1.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">El piloto y/o jefe de equipo asume plena responsabilidad por la conducta de los miembros de su staff durante la estadía.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">Utilización de pista únicamente permitida bajo los horarios asignados y autorizados.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">Cualquier piloto novato deberá recibir instrucción básica previa. El coaching en pista se prohíbe fuera de las áreas designadas para ello.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">La administración y la empresa no se hacen responsables por pérdida, robo o daños en artículos personales o vehículos en el recinto.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">El alquiler de terrazas en días competitivos se maneja por medio de Gerencia. Profesionales en fotografía deben identificarse, firmar exoneración y poseer seguro vigente.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50 text-red-300 font-medium">Bajo ninguna circunstancia ingresar bicicletas, monopatines, etc. o caminar hacia la pista activa sin autorización del juez de pista.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">Totalmente prohibido el uso de scooters, bicicletas y juegos infantiles con pelotas en el parqueo. Zonas de pits son para el staff mecánico y pilotos en labor exclusiva.</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">Por favor, utilice los basureros y preserve el estado de la infraestructura (baños, toldos, áreas VIP).</li>
+          <li class="pl-2 pb-6 border-b border-neutral-800/50">No está permitido colocar publicidad sin previa confirmación de gerencia.</li>
+          <li class="pl-2 pb-2">Prohibida las ventas de cualquier artículo o servicio sin previa autorización formal.</li>
+        </ol>
+      </div>
+
+      <!-- Important Notice Box -->
+      <div class="relative overflow-hidden bg-red-950/30 border border-red-900/50 rounded-2xl flex flex-col sm:flex-row shadow-[0_0_30px_rgba(220,38,38,0.1)]">
+        <!-- Glow accent -->
+        <div class="absolute inset-0 bg-gradient-to-r from-red-600/10 via-transparent to-transparent pointer-events-none"></div>
+        <div class="absolute top-0 left-0 w-2 h-full bg-red-600 shadow-[0_0_15px_rgba(220,38,38,1)]"></div>
         
-        <div class="rounded-lg p-6 mb-8 border-l-4 border-red-600">
-          <ol class="space-y-4 list-decimal list-outside pl-6 text-gray-200">
-            <li class="pb-2 border-b border-gray-700">1. Está prohibido el ingreso de mascotas, armas y sustancias psicoactivas en la pista y alrededores.</li>
-            <li class="pb-2 border-b border-gray-700">2. P1 Speedway es un lugar libre de humo, de acuerdo con la Ley 9028, por lo tanto está prohibido fumar cigarrillos de cualquier tipo y el uso de vapeadores.</li>
-            <li class="pb-2 border-b border-gray-700">3. Los menores de edad deben de estar acompañados por su padre, madre o apoderado legal en las áreas autorizadas.</li>
-            <li class="pb-2 border-b border-gray-700">4. No se permite el ingreso de vehículos particulares en zona de pits, deben de permanecer en el parqueo o zonas permitidas bajo la responsabilidad del conductor.</li>
-            <li class="pb-2 border-b border-gray-700">5. En las zonas de parqueos, calles de acceso etc., los vehículos automotores solo deben ser utilizados por personas que tengan la licencia correspondiente que los faculte para hacerlo, siguiendo todas las regulaciones que exige la ley de tránsito costarricense. Se deben respetar todas las señales de tránsito y velocidades establecidas.</li>
-            <li class="pb-2 border-b border-gray-700">6. Es obligatorio en todos los pits contar con extintores de Clase A (madera, cartón, papel, tela) Clase B (pintura, gasolina, petróleo) y Clase C (equipo o instalaciones eléctricas), con su certificación de uso vigente.</li>
-            <li class="pb-2 border-b border-gray-700">7. Todo usuario de la pista debe haber cancelado y firmado el documento de exoneración de responsabilidades, el uso de elementos de protección es obligatorio, para el caso de karts: casco cerrado, uniforme, neck, guante, zapatos altos o botines que cubran los tobillos. Para el caso de motocicletas, casco cerrado o que cubra toda la cabeza con googles, uniforme, guantes, rodilleras, botas altas.</li>
-            <li class="pb-2 border-b border-gray-700">8. Por razones de seguridad NO se permite el uso de la pista de personas con falda o pantalonetas, las personas que tengan pelo largo lo deberán tener recogido, con una cola, o usar balaclava y que en ninguna circunstancia quede fuera del uniforme, mujeres embarazadas, personas con algún tipo de discapacidad que impida la apropiada conducción del kart ó motocicleta, niños menores a 5 años.</li>
-            <li class="pb-2 border-b border-gray-700">9. No está permitido el uso de la pista a ninguna persona bajo los efectos del alcohol o cualquier tipo de droga.</li>
-            <li class="pb-2 border-b border-gray-700">10. Antes de utilizar la pista, verificar el sentido de giro autorizado, verificar con los oficiales de pista.</li>
-            <li class="pb-2 border-b border-gray-700">11. Solo se permite hacer mecánica en la zona de pits, no es permitido en ninguna otra parte de la pista.</li>
-            <li class="pb-2 border-b border-gray-700">12. No está permitido lavar karts, motos, o cualquier otro tipo de vehículo en la zona de pits. Se habilitará un área específica para lavado y únicamente está permitido el uso de desengrasante, el uso de Gasolina ó Diesel NO está permitido.</li>
-            <li class="pb-2 border-b border-gray-700">13. Respetar y no obstaculizar las zonas de evacuación, atención médica y puntos de encuentro.</li>
-            <li class="pb-2 border-b border-gray-700">14. Solo se debe consumir alimentos y bebidas en zonas autorizadas, no en pista ni pits.</li>
-            <li class="pb-2 border-b border-gray-700">15. El piloto practicante y sus acompañantes son responsables por daños materiales y personales causados a terceros o a las instalaciones de P1 Speedway.</li>
-            <li class="pb-2 border-b border-gray-700">16. El piloto y/o jefe de equipo es responsable por la conducta de los miembros de su equipo y demás participantes durante su tiempo en las instalaciones.</li>
-            <li class="pb-2 border-b border-gray-700">17. Solo se puede utilizar la pista e instalaciones en los horarios autorizados.</li>
-            <li class="pb-2 border-b border-gray-700">18. Los pilotos novatos deben recibir asesoría de conducción para poder salir a la pista. Está prohibido el coaching salvo en los espacios especiales para el mismo.</li>
-            <li class="pb-2 border-b border-gray-700">19. La empresa no se hace responsable por la pérdida, robo o daños a sus artículos personales ni en sus vehículos.</li>
-            <li class="pb-2 border-b border-gray-700">20. El alquiler de las terrazas en días de competencias se gestiona por medio de la Gerencia de la pista. Los fotógrafos deben de estar identificados, firmar la exoneración de responsabilidad y tener seguro al día.</li>
-            <li class="pb-2 border-b border-gray-700">21. Respetar salidas e ingresos de emergencia.</li>
-            <li class="pb-2 border-b border-gray-700">22. No ingresar bicicletas, monopatines u otro vehículo a la pista mientras este en uso. Totalmente prohibido ingresar a la pista sin autorización.</li>
-            <li class="pb-2 border-b border-gray-700">23. Totalmente prohibido el uso de scooters, bicicletas y juegos con pelotas en el parqueo. La zona de pit es exclusiva para pilotos, mecánicos y miembros de los equipos.</li>
-            <li class="pb-2 border-b border-gray-700">24. Mantener el buen uso y cuidado de las instalaciones (baños, toldos y zonas sociales) Utilizar los basureros.</li>
-            <li class="pb-2 border-b border-gray-700">25. No colocar publicidad sin previa autorización de P1 Speedway.</li>
-            <li class="pb-2 border-b border-gray-700">26. Prohibida las ventas de cualquier tipo sin previa autorización de P1 Speedway.</li>
-          </ol>
+        <div class="p-8 sm:p-10 flex items-start gap-6">
+          <div class="bg-black/50 p-4 rounded-xl shrink-0 border border-red-900/50">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-alert text-red-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+          </div>
+          <div>
+            <h2 class="text-2xl font-black text-white mb-4 tracking-tight">AVISO IMPORTANTE</h2>
+            <div class="space-y-4">
+              <p class="text-neutral-300 text-lg leading-relaxed">
+                <span class="font-bold text-white mr-2">27.</span>
+                El fiel cumplimiento de estas normativas es esencial para garantizar un ecosistema deportivo sano y la seguridad de cada persona presente.
+              </p>
+              <p class="text-red-300 font-bold bg-red-950/50 p-4 rounded-lg border border-red-900/50 text-lg">
+                28. El incumplimiento de cualquiera de estas normas devengará una multa inmediata de $100 USD para la persona o su equipo infractor.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="mt-10 flex gap-4">
-        <div class="bg-red-900 border-l-4 border-red-600 p-4 rounded-lg w-1/4 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-          </svg>
-        </div>
-        <div class="bg-red-900 border-l-4 border-red-600 p-5 rounded-lg w-3/4">
-          <h2 class="text-lg font-bold text-white mb-2">IMPORTANTE</h2>
-          <p class="text-gray-200 mb-3">27. El cumplimiento de estas normas es esencial para garantizar la seguridad de todos los usuarios de P1 Speedway.</p>
-          <p class="text-red-300 font-semibold">28. El incumplimiento de cualquiera de estas normas devengará una multa de $100 para la persona o equipo infractor.</p>
-        </div>
-      </div>
-
-      <footer class="mt-16 pt-8 border-t border-red-800 text-center text-sm text-gray-400">
-        <p>© P1 Speedway. Todos los derechos reservados.</p>
-      </footer>
     </div>
   </main>
 </Layout>
-
-<style>
-  .prose ol {
-    margin-left: 0;
-    counter-reset: item;
-  }
-  .prose ol li {
-    margin-bottom: 0;
-    display: block;
-    position: relative;
-  }
-  .prose ol li::before {
-    display: none; /* Eliminamos el contador automático de Tailwind */
-  }
-  /* Aseguramos que la lista use el contador HTML nativo */
-  .list-decimal {
-    list-style-type: decimal !important;
-  }
-</style>

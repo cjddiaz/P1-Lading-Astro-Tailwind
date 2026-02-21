@@ -1,25 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ImageGallery from '../components/ImageGallery.astro';
+import ImageGallery from '../components/ImageGallery';
+import karting1 from '../assets/images/karting/karting1.jpg';
+import karting2 from '../assets/images/karting/karting2.jpg';
+import karting3 from '../assets/images/karting/karting3.jpg';
+import karting4 from '../assets/images/karting/karting4.jpg';
+import karting5 from '../assets/images/karting/karting5.jpg';
+import karting6 from '../assets/images/karting/karting6.jpg';
+import karting7 from '../assets/images/karting/karting7.jpg';
+import karting8 from '../assets/images/karting/karting8.jpg';
+import karting9 from '../assets/images/karting/karting9.jpg';
+import karting10 from '../assets/images/karting/karting10.jpg';
 
+// Mock data based on the old galeria-kartismo.astro
 const kartingImages = [
-  { id: 1, url: 'https://p1speedway.com/images/karting/karting1.jpg', caption: 'P1 - Puro Motor' },
-  { id: 2, url: 'https://p1speedway.com/images/karting/karting2.jpg', caption: 'P1 - Puro Motor' },
-  { id: 3, url: 'https://p1speedway.com/images/karting/karting3.jpg', caption: 'P1 - Puro Motor' },
-  { id: 4, url: 'https://p1speedway.com/images/karting/karting4.jpg', caption: 'P1 - Puro Motor' },
-  { id: 5, url: 'https://p1speedway.com/images/karting/karting5.jpg', caption: 'P1 - Puro Motor' },
-  { id: 6, url: 'https://p1speedway.com/images/karting/karting6.jpg', caption: 'P1 - Puro Motor' },
-  { id: 7, url: 'https://p1speedway.com/images/karting/karting7.jpg', caption: 'P1 - Puro Motor' },
-  { id: 8, url: 'https://p1speedway.com/images/karting/karting8.jpg', caption: 'P1 - Puro Motor' },
-  { id: 9, url: 'https://p1speedway.com/images/karting/karting9.jpg', caption: 'P1 - Puro Motor' },
-  { id: 10, url: 'https://p1speedway.com/images/karting/karting10.jpg', caption: 'P1 - Puro Motor' },
+  { id: 1, url: karting1, caption: 'Práctica de Kartismo Profesional' },
+  { id: 2, url: karting2, caption: 'P1 - Puro Motor' },
+  { id: 3, url: karting3, caption: 'Competencia Nocturna' },
+  { id: 4, url: karting4, caption: 'P1 - Puro Motor' },
+  { id: 5, url: karting5, caption: 'P1 - Puro Motor' },
+  { id: 6, url: karting6, caption: 'P1 - Puro Motor' },
+  { id: 7, url: karting7, caption: 'P1 - Puro Motor' },
+  { id: 8, url: karting8, caption: 'P1 - Puro Motor' },
+  { id: 9, url: karting9, caption: 'P1 - Puro Motor' },
+  { id: 10, url: karting10, caption: 'Podium de P1 - Puro Motor' },
 ];
 ---
 
 <Layout title="Galería de Kartismo - P1 Speedway">
-  <ImageGallery
-    title="Galería de Kartismo"
-    photographer="Puro Motor"
-    images={kartingImages}
-  />
+  <main class="pt-32 pb-16 bg-black min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* client:load is important so the modal works on click immediately */}
+      <ImageGallery
+        client:load
+        title="Galería de Kartismo"
+        photographer="Puro Motor"
+        images={kartingImages}
+      />
+    </div>
+  </main>
 </Layout>

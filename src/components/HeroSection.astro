@@ -1,0 +1,80 @@
+---
+// Helper to conditionally render the logo on homepage vs others if needed,
+// but layout handles navbar. Hero section itself doesn't need to check URL typically,
+// but we might want the huge logo in the hero text.
+import background1 from '../assets/images/background1.webp';
+import P1logo from '../assets/images/P1logo.webp';
+---
+
+<section id="Home" class="relative h-[100svh] w-full mt-0 pt-0 overflow-hidden flex items-center bg-black">
+  <!-- Background Image with zoom animation -->
+  <div class="absolute inset-0 w-full h-full">
+    <img 
+      src={background1} 
+      alt="Background Hero P1 Speedway" 
+      class="w-full h-full object-cover object-center opacity-60 animate-scale-slow"
+      {...{ fetchpriority: 'high' } as any}
+    />
+  </div>
+
+  <!-- Gradient Overlay (Tailwind instead of inline style) -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black/100 via-black/80 to-red-900/40"></div>
+  
+  <!-- Content -->
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col md:flex-row items-center justify-center md:justify-between gap-12 md:gap-8 pt-20">
+    <!-- Logo -->
+    <div class="flex-shrink-0 animate-fade-in-up">
+      <img 
+        src={P1logo} 
+        alt="P1 Logo" 
+        class="w-56 md:w-96 lg:w-[45rem] max-w-full object-contain filter drop-shadow-2xl" 
+      />
+    </div>
+
+    <!-- Typography -->
+    <div class="flex flex-col items-center md:items-start text-center md:text-left animate-fade-in-up animation-delay-300">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-black text-white leading-tight md:leading-[1.1] uppercase tracking-tighter">
+        <span class="block">Viviendo La</span>
+        <span class="block text-red-600">Velocidad</span>
+        <span class="block">Al Límite</span>
+      </h1>
+      <div class="mt-8">
+        <a 
+          href="#aboutus"
+          class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-md text-white bg-red-600 hover:bg-red-700 md:text-lg transition-all duration-300 shadow-lg shadow-red-600/30 hover:shadow-red-600/50 uppercase tracking-widest hover:scale-105"
+        >
+          Descubre Más
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Local animations specific to the hero to make it look premium */
+  .animate-scale-slow {
+    animation: scale-slow 20s ease-in-out infinite alternate;
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  @keyframes scale-slow {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+  }
+
+  @keyframes fade-in-up {
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
