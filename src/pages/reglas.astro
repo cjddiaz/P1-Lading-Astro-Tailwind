@@ -23,42 +23,151 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <main class="bg-black py-16 md:py-24">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Rules List -->
-      <div class="bg-neutral-900/40 border border-neutral-800 rounded-2xl p-6 md:p-12 mb-12 shadow-2xl">
-        <ol class="space-y-6 list-decimal list-outside ml-6 text-neutral-300 text-lg marker:text-red-500 marker:font-bold">
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">Está prohibido el ingreso de mascotas, armas y sustancias psicoactivas en la pista y alrededores.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">P1 Speedway es un lugar libre de humo, de acuerdo con la Ley 9028, por lo tanto está prohibido fumar cigarrillos de cualquier tipo y el uso de vapeadores.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">Los menores de edad deben de estar acompañados por su padre, madre o apoderado legal en las áreas autorizadas.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">No se permite el ingreso de vehículos particulares en zona de pits, deben de permanecer en el parqueo o zonas permitidas bajo la responsabilidad del conductor.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50 text-neutral-200 font-medium">En las zonas de parqueos, calles de acceso etc., los vehículos automotores solo deben ser utilizados por personas que tengan la licencia correspondiente que los faculte para hacerlo, siguiendo todas las regulaciones que exige la ley de tránsito costarricense. Se deben respetar todas las señales de tránsito y velocidades establecidas.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">Es obligatorio en todos los pits contar con extintores de Clase A (madera, cartón, papel, tela) Clase B (pintura, gasolina, petróleo) y Clase C (equipo o instalaciones eléctricas), con su certificación de uso vigente.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50 text-neutral-200">Todo usuario de la pista debe haber cancelado y firmado el documento de exoneración de responsabilidades. El uso de elementos de protección es <strong>obligatorio</strong>:
-            <ul class="list-disc ml-6 mt-4 space-y-2 text-neutral-400 marker:text-neutral-600 font-normal">
-              <li><strong>Para karts:</strong> Casco cerrado, uniforme, neck protection, guantes, zapatos altos o botines que cubran los tobillos.</li>
-              <li><strong>Para motocicletas:</strong> Casco cerrado o que cubra toda la cabeza con googles, uniforme de protección, guantes, rodilleras, botas altas.</li>
-            </ul>
-          </li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">Por razones de seguridad NO se permite el uso de la pista a personas con falda o pantalonetas. El cabello largo se debe llevar recogido (cola o balaclava) dentro del uniforme. Igualmente prohibido para: mujeres embarazadas, infantes menores a 5 años o personas con condiciones físicas que impidan la conducción segura.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50 font-bold text-red-100">No está permitido el uso de la pista a ninguna persona bajo los efectos del alcohol o cualquier tipo de droga.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">Antes de utilizar la pista, verificar el sentido de giro autorizado, confirmar siempre con los oficiales de pista.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">Solo se permite hacer mecánica en la zona específica de pits, no es permitido en ninguna otra parte de la pista.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">No está permitido lavar karts, motos, o cualquier otro tipo de vehículo en la zona de pits. Se habilitará un área específica e impone uso único de desengrasante. (Prohibido uso de gasolina o diésel como disolvente).</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">Respetar y no obstaculizar las zonas de evacuación, atención médica y puntos de encuentro de emergencias.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">El consumo de alimentos o bebidas es estrictamente limitado a las zonas sociales autorizadas.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50 text-neutral-200">El piloto practicante y sus acompañantes son responsables al 100% por daños materiales y personales causados a terceros o a las instalaciones de P1.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">El piloto y/o jefe de equipo asume plena responsabilidad por la conducta de los miembros de su staff durante la estadía.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">Utilización de pista únicamente permitida bajo los horarios asignados y autorizados.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">Cualquier piloto novato deberá recibir instrucción básica previa. El coaching en pista se prohíbe fuera de las áreas designadas para ello.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">La administración y la empresa no se hacen responsables por pérdida, robo o daños en artículos personales o vehículos en el recinto.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">El alquiler de terrazas en días competitivos se maneja por medio de Gerencia. Profesionales en fotografía deben identificarse, firmar exoneración y poseer seguro vigente.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50 text-red-300 font-medium">Bajo ninguna circunstancia ingresar bicicletas, monopatines, etc. o caminar hacia la pista activa sin autorización del juez de pista.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">Totalmente prohibido el uso de scooters, bicicletas y juegos infantiles con pelotas en el parqueo. Zonas de pits son para el staff mecánico y pilotos en labor exclusiva.</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">Por favor, utilice los basureros y preserve el estado de la infraestructura (baños, toldos, áreas VIP).</li>
-          <li class="pl-2 pb-6 border-b border-neutral-800/50">No está permitido colocar publicidad sin previa confirmación de gerencia.</li>
-          <li class="pl-2 pb-2">Prohibida las ventas de cualquier artículo o servicio sin previa autorización formal.</li>
-        </ol>
+      <!-- Rules Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        
+        <!-- 1. SEGURIDAD GENERAL -->
+        <div class="bg-neutral-900/40 border border-neutral-800 rounded-2xl p-8 hover:border-red-500/30 transition-colors group">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-red-500/10 rounded-xl group-hover:bg-red-500/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+            </div>
+            <h2 class="text-xl font-bold text-white uppercase tracking-tight">1. Seguridad General</h2>
+          </div>
+          <ul class="space-y-4 text-neutral-400">
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Prohibido el ingreso de mascotas, armas, alcohol y sustancias psicoactivas.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Instalaciones libres de humo (Ley N.º 9028): no fumar ni vapear.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Prohibido el uso de la pista bajo efectos de alcohol o drogas.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Respetar zonas de evacuación, atención médica y salidas de emergencia.</li>
+          </ul>
+        </div>
+
+        <!-- 2. ACCESO Y PERMANENCIA -->
+        <div class="bg-neutral-900/40 border border-neutral-800 rounded-2xl p-8 hover:border-red-500/30 transition-colors group">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-red-500/10 rounded-xl group-hover:bg-red-500/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg>
+            </div>
+            <h2 class="text-xl font-bold text-white uppercase tracking-tight">2. Acceso y Permanencia</h2>
+          </div>
+          <ul class="space-y-4 text-neutral-400">
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Menores de edad solo acompañados por su responsable legal y en áreas autorizadas.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Prohibido ingresar a pista sin autorización.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Uso de pista e instalaciones solo en horarios autorizados.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Cumplimiento obligatorio de las regulaciones internas, normas de parqueo y conducción establecidas por el Parque de Diversiones.</li>
+          </ul>
+        </div>
+
+        <!-- 3. USO DE PISTA -->
+        <div class="bg-neutral-900/40 border border-neutral-800 rounded-2xl p-8 hover:border-red-500/30 transition-colors group">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-red-500/10 rounded-xl group-hover:bg-red-500/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg>
+            </div>
+            <h2 class="text-xl font-bold text-white uppercase tracking-tight">3. Uso de Pista</h2>
+          </div>
+          <ul class="space-y-4 text-neutral-400">
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Verificar siempre el sentido de giro autorizado con los oficiales de pista.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Piloto novatos deben recibir asesoría previa; el coaching solo en áreas designadas.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Prohibido ingresar bicicletas, monopatines u otros vehículos a la pista en uso.</li>
+          </ul>
+        </div>
+
+        <!-- 4. ZONA DE PITS -->
+        <div class="bg-neutral-900/40 border border-neutral-800 rounded-2xl p-8 hover:border-red-500/30 transition-colors group">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-red-500/10 rounded-xl group-hover:bg-red-500/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500"><rect width="20" height="14" x="2" y="6" rx="2"/><path d="M7 6V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><path d="M2 13h20"/><path d="M7 13v3"/><path d="M12 13v3"/><path d="M17 13v3"/></svg>
+            </div>
+            <h2 class="text-xl font-bold text-white uppercase tracking-tight">4. Zona de Pits</h2>
+          </div>
+          <ul class="space-y-4 text-neutral-400">
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Zona exclusiva para pilotos, mecánicos y equipos autorizados.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Prohibido el ingreso de vehículos particulares.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Mecánica y mantenimiento solo en pits.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Prohibido lavar vehículos en pits, solamente en áreas designadas.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Vehículos deben tener tanques de gasolina/diésel vacíos (almacenamiento).</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Obligatorio contar con extintores Clase A, B y C vigentes.</li>
+          </ul>
+        </div>
+
+        <!-- 5. EQUIPO DE SEGURIDAD -->
+        <div class="bg-neutral-900/40 border border-neutral-800 rounded-2xl p-8 hover:border-red-500/30 transition-colors group">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-red-500/10 rounded-xl group-hover:bg-red-500/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h2 class="text-xl font-bold text-white uppercase tracking-tight">5. Equipo de Seguridad</h2>
+          </div>
+          <ul class="space-y-4 text-neutral-400">
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Uso obligatorio de equipo de protección completo y firma de exoneración.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Prohibido usar la pista con ropa inadecuada o cabello suelto.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Prohibido el ingreso de embarazadas, niños &lt; 5 años o personas inhabilitadas para conducir.</li>
+          </ul>
+        </div>
+
+        <!-- 6. VEHÍCULOS Y CIRCULACIÓN INTERNA -->
+        <div class="bg-neutral-900/40 border border-neutral-800 rounded-2xl p-8 hover:border-red-500/30 transition-colors group">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-red-500/10 rounded-xl group-hover:bg-red-500/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7c0 1.1.9 2 2 2h10"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+            </div>
+            <h2 class="text-xl font-bold text-white uppercase tracking-tight">6. Vehículos y Circulación</h2>
+          </div>
+          <ul class="space-y-4 text-neutral-400">
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Circulación interna solo con licencia vigente, respetando Ley de Tránsito y señales.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Prohibido el uso de scooters, bicicletas o juegos con pelotas en parqueos.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> No está permitido sobrevolar drones sobre la pista ni áreas de parqueo.</li>
+          </ul>
+        </div>
+
+        <!-- 7. ALIMENTOS Y PARRILLAS -->
+        <div class="bg-neutral-900/40 border border-neutral-800 rounded-2xl p-8 hover:border-red-500/30 transition-colors group">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-red-500/10 rounded-xl group-hover:bg-red-500/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+            </div>
+            <h2 class="text-xl font-bold text-white uppercase tracking-tight">7. Alimentos y Parrillas</h2>
+          </div>
+          <ul class="space-y-4 text-neutral-400">
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Consumo y producción de alimentos solamente en zonas autorizadas.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Prohibidas las parrillas de gas o carbón en talleres y palcos (Ley N.º 8228).</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Únicamente se permiten parrillas eléctricas.</li>
+          </ul>
+        </div>
+
+        <!-- 8. RESPONSABILIDADES -->
+        <div class="bg-neutral-900/40 border border-neutral-800 rounded-2xl p-8 hover:border-red-500/30 transition-colors group">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-red-500/10 rounded-xl group-hover:bg-red-500/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+            </div>
+            <h2 class="text-xl font-bold text-white uppercase tracking-tight">8. Responsabilidades</h2>
+          </div>
+          <ul class="space-y-4 text-neutral-400">
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Pilotos y equipos responden por daños a terceros o a instalaciones.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> El piloto o jefe de equipo es responsable por la conducta de su equipo.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> P1 Speedway no se hace responsable por robos, pérdidas o daños a objetos.</li>
+          </ul>
+        </div>
+
+        <!-- 9. TERRAZAS Y COMERCIO -->
+        <div class="bg-neutral-900/40 border border-neutral-800 rounded-2xl p-8 hover:border-red-500/30 transition-colors group">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-red-500/10 rounded-xl group-hover:bg-red-500/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="m3 9 2.44-4.91A2 2 0 0 1 7.23 3h9.54a2 2 0 0 1 1.79 1.09L21 9"/><path d="M9 3v6"/><path d="M15 3v6"/></svg>
+            </div>
+            <h2 class="text-xl font-bold text-white uppercase tracking-tight">9. Terrazas y Comercio</h2>
+          </div>
+          <ul class="space-y-4 text-neutral-400">
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Alquiler de terrazas se gestiona únicamente por medio de Gerencia.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Fotógrafos deben estar identificados, firmar exoneración y tener seguro.</li>
+            <li class="flex gap-3"><span class="text-red-500 font-bold">•</span> Prohibida publicidad y ventas sin autorización de P1 Speedway.</li>
+          </ul>
+        </div>
+
       </div>
 
       <!-- Important Notice Box -->
@@ -72,14 +181,13 @@ import Layout from '../layouts/Layout.astro';
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-alert text-red-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
           </div>
           <div>
-            <h2 class="text-2xl font-black text-white mb-4 tracking-tight">AVISO IMPORTANTE</h2>
+            <h2 class="text-2xl font-black text-white mb-4 tracking-tight uppercase">Aviso Importante</h2>
             <div class="space-y-4">
               <p class="text-neutral-300 text-lg leading-relaxed">
-                <span class="font-bold text-white mr-2">27.</span>
                 El fiel cumplimiento de estas normativas es esencial para garantizar un ecosistema deportivo sano y la seguridad de cada persona presente.
               </p>
               <p class="text-red-300 font-bold bg-red-950/50 p-4 rounded-lg border border-red-900/50 text-lg">
-                28. El incumplimiento de cualquiera de estas normas devengará una multa inmediata de $100 USD para la persona o su equipo infractor.
+                El incumplimiento de cualquiera de estas normas devengará una multa inmediata de $100 USD para la persona o su equipo infractor, así como la sanción o responsabilidad expuesta en las reglas ya mencionadas.
               </p>
             </div>
           </div>
